@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golf Trip 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* -- TOKENS ------------------------------- */
+  :root {
+    --forest:    #1c2e1c;
+    --green:     #2e4a22;
+    --green-mid: #3d6130;
+    --fairway:   #c8dbb0;
+    --cream:     #f5f0e6;
+    --parchment: #ede6d4;
+    --gold:      #a07830;
+    --gold-lt:   #c9a24a;
+    --ink:       #1a1a14;
+    --muted:     #6b6455;
+    --rule:      #bfac88;
+  }
+
+  /* -- RESET -------------------------------- */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  img { display: block; max-width: 100%; }
+
+  /* -- TYPOGRAPHY --------------------------- */
+  .display {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .display-italic {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .mono {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* -- GOLD RULE ---------------------------- */
+  .rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.5rem 0;
+  }
+
+  .rule-thick {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 3rem 0;
+  }
+
+  /* -- HERO --------------------------------- */
+  .hero {
+    background-color: var(--forest);
+    background-image:
+      repeating-linear-gradient(
+        170deg,
+        rgba(255,255,255,0.018) 0px,
+        rgba(255,255,255,0.018) 1px,
+        transparent 1px,
+        transparent 60px
+      ),
+      repeating-linear-gradient(
+        80deg,
+        rgba(255,255,255,0.012) 0px,
+        rgba(255,255,255,0.012) 1px,
+        transparent 1px,
+        transparent 80px
+      );
+    color: var(--cream);
+    text-align: center;
+    padding: 5rem 2rem 4.5rem;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(160,120,48,0.18) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-crest {
+    width: 56px;
+    height: 56px;
+    border: 1.5px solid var(--gold-lt);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.8rem;
+    font-size: 1.6rem;
+    color: var(--gold-lt);
+    position: relative;
+  }
+
+  .hero-crest::before, .hero-crest::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    height: 1px;
+    background: var(--gold-lt);
+    opacity: 0.5;
+  }
+  .hero-crest::before { right: calc(100% + 10px); }
+  .hero-crest::after  { left:  calc(100% + 10px); }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-lt);
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-sub {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--fairway);
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .hero-meta-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-lt);
+    opacity: 0.8;
+  }
+
+  .hero-meta-value {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem;
+    color: var(--cream);
+  }
+
+  /* -- NAV STRIP ---------------------------- */
+  .nav-strip {
+    background: var(--parchment);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-strip a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.85rem 1.4rem;
+    border-right: 1px solid var(--rule);
+    white-space: nowrap;
+    transition: color 0.15s, background 0.15s;
+  }
+  .nav-strip a:first-child { border-left: 1px solid var(--rule); }
+  .nav-strip a:hover { color: var(--green); background: rgba(160,120,48,0.06); }
+
+  /* -- MAIN LAYOUT -------------------------- */
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem 6rem;
+  }
+
+  /* -- SECTION HEADERS ---------------------- */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-header::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--forest);
+    white-space: nowrap;
+  }
+
+  section { margin-bottom: 4.5rem; }
+
+  /* -- SCHEDULE ----------------------------- */
+  .day-block { margin-bottom: 2.5rem; }
+
+  .day-label {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .day-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--forest);
+  }
+
+  .day-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .tee-time-list { list-style: none; }
+
+  .tee-time-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0.5rem 1.2rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+
+  .tee-time-item:last-child { border-bottom: none; }
+
+  .time-val {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--gold);
+    padding-top: 0.1rem;
+    font-weight: 500;
+  }
+
+  .event-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+
+  .event-detail {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 0.1rem;
+  }
+
+  /* -- COURSES / HOTEL ---------------------- */
+  .venue-card {
+    background: var(--parchment);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--gold);
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .venue-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 0.2rem;
+  }
+
+  .venue-type {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .venue-address {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .venue-address a {
+    color: var(--green-mid);
+    text-decoration: none;
+    border-bottom: 1px solid var(--fairway);
+    transition: color 0.15s;
+  }
+  .venue-address a:hover { color: var(--green); }
+
+  .venue-note {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 0.4rem;
+  }
+
+  /* -- BET FORMAT --------------------------- */
+  .format-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 1.5rem;
+  }
+
+  .format-cell {
+    background: var(--parchment);
+    padding: 1.1rem 1.3rem;
+  }
+
+  .format-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+  }
+
+  .format-val {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--forest);
+  }
+
+  .format-sub {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 0.15rem;
+  }
+
+  .rules-list {
+    list-style: none;
+  }
+
+  .rules-list li {
+    display: flex;
+    gap: 0.9rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.92rem;
+    align-items: start;
+  }
+
+  .rules-list li:last-child { border-bottom: none; }
+
+  .rule-marker {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--gold);
+    padding-top: 0.2rem;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+
+  /* -- PACKING LIST ------------------------- */
+  .pack-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .pack-group-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .pack-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .pack-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.3rem 0;
+    font-size: 0.88rem;
+    color: var(--ink);
+  }
+
+  .pack-check {
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid var(--rule);
+    border-radius: 2px;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* -- FOOTER ------------------------------- */
+  footer {
+    background: var(--forest);
+    color: var(--fairway);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  footer span { color: var(--gold-lt); margin: 0 0.6rem; }
+
+  /* -- PRINT -------------------------------- */
+  @media print {
+    .nav-strip { display: none; }
+    .hero { padding: 2rem; }
+    body { font-size: 13px; }
+    section { page-break-inside: avoid; }
+  }
+
+  /* -- RESPONSIVE --------------------------- */
+  @media (max-width: 600px) {
+    main { padding: 2.5rem 1.2rem 4rem; }
+    .format-grid { grid-template-columns: 1fr; }
+    .pack-columns { grid-template-columns: 1fr; gap: 0; }
+    .photo-grid { grid-template-columns: repeat(2, 1fr); }
+    .tee-time-item { grid-template-columns: 75px 1fr; }
+    .hero-crest::before, .hero-crest::after { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== HERO ====== -->
+<div class="hero">
+  <div class="hero-crest"></div>
+  <p class="hero-eyebrow">Annual Golf Trip · 2026</p>
+  <h1>Treetops, Michigan</h1>
+  <p class="hero-sub">Three days. Four rounds. Michigan's most spectacular resort.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Dates</span>
+      <span class="hero-meta-value">July 9-12, 2026</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Location</span>
+      <span class="hero-meta-value">Gaylord, MI</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Players</span>
+      <span class="hero-meta-value">8 Gentlemen</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Rounds</span>
+      <span class="hero-meta-value">4 Rounds</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Confirmation</span>
+      <span class="hero-meta-value">1112CZ</span>
+    </div>
+  </div>
+</div>
+
+<!-- ====== NAV ====== -->
+<nav class="nav-strip">
+  <a href="#schedule">Schedule</a>
+  <a href="#lodging">Lodging</a>
+  <a href="#format">Betting Format</a>
+  <a href="#packing">Packing List</a>
+</nav>
+
+<!-- ====== MAIN ====== -->
+<main>
+
+  <!-- SCHEDULE -->
+  <section id="schedule">
+    <div class="section-header">
+      <h2 class="section-title">Schedule &amp; Tee Times</h2>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="day-block">
+      <div class="day-label">
+        <span class="day-name">Thursday</span>
+        <span class="day-date">July 9</span>
+      </div>
+      <ul class="tee-time-list">
+        <li class="tee-time-item">
+          <span class="time-val">5:00 PM</span>
+          <div>
+            <div class="event-name">Check In -- 5 Bedroom Condo</div>
+            <div class="event-detail">Treetops Resort · Check-in begins after 5:00 PM · Confirmation #1112CZ</div>
+          </div>
+        </li>
+        <li class="tee-time-item">
+          <span class="time-val">2:20 PM</span>
+          <div>
+            <div class="event-name">Round 1 -- Jones "Masterpiece"</div>
+            <div class="event-detail">Session 1 · Fourball (Best Ball) · 2 v 2 matches</div>
+          </div>
+        </li>
+        <li class="tee-time-item">
+          <span class="time-val">Evening</span>
+          <div>
+            <div class="event-name">Welcome Dinner</div>
+            <div class="event-detail">Beer, Brats & Bad Decisions</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <hr class="rule">
+
+    <!-- Day 2 -->
+    <div class="day-block">
+      <div class="day-label">
+        <span class="day-name">Friday</span>
+        <span class="day-date">July 10</span>
+      </div>
+      <ul class="tee-time-list">
+        <li class="tee-time-item">
+          <span class="time-val">Early AM</span>
+          <div>
+            <div class="event-name">Breakfast at the Condo</div>
+            <div class="event-detail">Coffee · Breakfast Sandwiches · Hydration</div>
+          </div>
+        </li>
+        <li class="tee-time-item">
+          <span class="time-val">8:40 AM</span>
+          <div>
+            <div class="event-name">Round 2 -- Smith "Signature"</div>
+            <div class="event-detail">Session 2 Morning · Fourball (Best Ball) · 2 v 2 matches</div>
+          </div>
+        </li>
+        <li class="tee-time-item">
+          <span class="time-val">2:24 PM</span>
+          <div>
+            <div class="event-name">Round 3 -- Smith "Tradition"</div>
+            <div class="event-detail">Session 3 · Singles · 1 v 1</div>
+          </div>
+        </li>
+        <li class="tee-time-item">
+          <span class="time-val">Evening</span>
+          <div>
+            <div class="event-name">Dinner</div>
+            <div class="event-detail">Chicken Alfredo, Mac & Cheese & Survival</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <hr class="rule">
+
+    <!-- Day 3 -->
+    <div class="day-block">
+      <div class="day-label">
+        <span class="day-name">Saturday</span>
+        <span class="day-date">July 11</span>
+      </div>
+      <ul class="tee-time-list">
+        <li class="tee-time-item">
+          <span class="time-val">Early AM</span>
+          <div>
+            <div class="event-name">Breakfast at the Condo</div>
+            <div class="event-detail">Coffee · Breakfast Sandwiches · Hydration</div>
+          </div>
+        </li>
+        <li class="tee-time-item">
+          <span class="time-val">10:00 AM</span>
+          <div>
+            <div class="event-name">Round 4 -- Fazio "Premier"</div>
+            <div class="event-detail">Session 4 · Format TBD · Final round</div>
+          </div>
+        </li>
+        <li class="tee-time-item">
+          <span class="time-val">Afternoon</span>
+          <div>
+            <div class="event-name">Awards &amp; Final Settlement</div>
+            <div class="event-detail">Settle all bets. Pay your debts. Champion crowned.</div>
+          </div>
+        </li>
+        <li class="tee-time-item">
+          <span class="time-val">Evening</span>
+          <div>
+            <div class="event-name">Drink · Eat · UFC</div>
+            <div class="event-detail">The only fitting way to end a trip like this</div>
+          </div>
+        </li>
+        <li class="tee-time-item">
+          <span class="time-val">Sunday</span>
+          <div>
+            <div class="event-name">Check Out -- July 12</div>
+            <div class="event-detail">Condominiums check out by 11:00 AM · Safe travels, gentlemen</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LODGING -->
+  <section id="lodging">
+    <div class="section-header">
+      <h2 class="section-title">Lodging &amp; Courses</h2>
+    </div>
+
+    <p class="eyebrow" style="margin-bottom:1rem">Where We're Staying</p>
+
+    <div class="venue-card">
+      <div class="venue-name">Treetops Resort -- 5 Bedroom Condo</div>
+      <div class="venue-type">Lodging · 3 Nights · July 9-12, 2026</div>
+      <div class="venue-address">
+         <a href="https://maps.google.com/?q=4550+Fazio+Dr+Gaylord+MI+49735" target="_blank">4550 Fazio Dr, Unit 4A (Tentative), Gaylord, MI 49735</a>
+      </div>
+      <div class="venue-address"> Check-in: After 5:00 PM Thursday &nbsp;·&nbsp; Check-out: 11:00 AM Sunday</div>
+      <div class="venue-address"> Confirmation #: <strong>1112CZ</strong> &nbsp;·&nbsp; Package: $762/golfer (8 sharing)</div>
+      <div class="venue-note">Balance due June 25, 2026</div>
+    </div>
+
+    <hr class="rule">
+    <p class="eyebrow" style="margin-bottom:1rem">Courses</p>
+
+    <div class="venue-card">
+      <div class="venue-name">Jones "Masterpiece"</div>
+      <div class="venue-type">Round 1 · Thursday, July 9 · 2:20 PM</div>
+      <div class="venue-address"> <a href="https://maps.google.com/?q=Treetops+Resort+Gaylord+Michigan" target="_blank">Treetops Resort, Gaylord, MI 49735</a></div>
+      <div class="venue-note">Designed by Robert Trent Jones Sr. · 8 players · Cart &amp; range included</div>
+    </div>
+
+    <div class="venue-card">
+      <div class="venue-name">Smith "Signature"</div>
+      <div class="venue-type">Round 2 · Friday, July 10 · 8:40 AM</div>
+      <div class="venue-address"> <a href="https://maps.google.com/?q=Treetops+Resort+Gaylord+Michigan" target="_blank">Treetops Resort, Gaylord, MI 49735</a></div>
+      <div class="venue-note">Designed by Rick Smith · 8 players · Cart &amp; range included</div>
+    </div>
+
+    <div class="venue-card">
+      <div class="venue-name">Smith "Tradition"</div>
+      <div class="venue-type">Round 3 · Friday, July 10 · 2:24 PM</div>
+      <div class="venue-address"> <a href="https://maps.google.com/?q=Treetops+Resort+Gaylord+Michigan" target="_blank">Treetops Resort, Gaylord, MI 49735</a></div>
+      <div class="venue-note">Designed by Rick Smith · 8 players · Cart &amp; range included</div>
+    </div>
+
+    <div class="venue-card">
+      <div class="venue-name">Fazio "Premier"</div>
+      <div class="venue-type">Round 4 · Saturday, July 11 · 10:00 AM</div>
+      <div class="venue-address"> <a href="https://maps.google.com/?q=Treetops+Resort+Gaylord+Michigan" target="_blank">Treetops Resort, Gaylord, MI 49735</a></div>
+      <div class="venue-note">Designed by Tom Fazio · 8 players · Cart &amp; range included · Final round</div>
+    </div>
+  </section>
+
+  <!-- BETTING FORMAT -->
+  <section id="format">
+    <div class="section-header">
+      <h2 class="section-title">Betting Format</h2>
+    </div>
+
+    <!-- Buy-in banner -->
+    <div style="background:var(--forest);color:var(--cream);padding:1.3rem 1.6rem;margin-bottom:1.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.8rem;">
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:0.25rem;">Event Buy-In</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fff;">$100 <span style="font-size:0.9rem;font-weight:400;font-style:italic;color:var(--fairway)">per player</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:0.25rem;">Total Pot</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fff;">$800</div>
+      </div>
+    </div>
+
+    <!-- Teams -->
+    <p class="eyebrow" style="margin-bottom:0.9rem">The Teams</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:1.8rem;">
+      <div style="background:var(--parchment);padding:1.2rem 1.4rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Team A</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--forest);margin-bottom:0.6rem;">Team Collin</div>
+        <div style="font-size:0.85rem;color:var(--muted);line-height:1.9;">
+          Collin O'Riordon<br>Kyle Dockery<br>Jake Muellerschoen<br>Ryan Cook
+        </div>
+      </div>
+      <div style="background:var(--parchment);padding:1.2rem 1.4rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Team B</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--forest);margin-bottom:0.6rem;">Team Scott</div>
+        <div style="font-size:0.85rem;color:var(--muted);line-height:1.9;">
+          Scott Kosakowski<br>Enrico Morelli<br>Andrew Yokum<br>Dudley Singer
+        </div>
+      </div>
+    </div>
+
+    <!-- Session breakdown -->
+    <p class="eyebrow" style="margin-bottom:0.9rem">Session Breakdown</p>
+
+    <!-- Session 1 -->
+    <div style="border:1px solid var(--rule);border-left:3px solid var(--gold);margin-bottom:1px;">
+      <div style="background:var(--forest);color:var(--fairway);padding:0.6rem 1.2rem;display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;">Session 1 &mdash; Fourball</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;color:var(--gold-lt)">Thu Jul 9 · Jones "Masterpiece" · 2:20 PM</span>
+      </div>
+      <div style="background:var(--parchment);padding:1rem 1.2rem;">
+        <div style="font-size:0.85rem;color:var(--muted);margin-bottom:0.9rem;font-style:italic;">Each player plays their own ball throughout -- best score on each hole counts for the team.</div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:0.8rem;">
+          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.84rem;">
+            <span style="font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;width:48px;flex-shrink:0;">Match 1</span>
+            <span style="font-weight:600;color:var(--forest);">Collin O'Riordon &amp; Kyle Dockery</span>
+            <span style="font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--muted);margin:0 0.2rem;">vs</span>
+            <span style="font-weight:600;color:var(--forest);">Scott Kosakowski &amp; Enrico Morelli</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.84rem;">
+            <span style="font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;width:48px;flex-shrink:0;">Match 2</span>
+            <span style="font-weight:600;color:var(--forest);">Jake Muellerschoen &amp; Ryan Cook</span>
+            <span style="font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--muted);margin:0 0.2rem;">vs</span>
+            <span style="font-weight:600;color:var(--forest);">Dudley Singer &amp; Andrew Yokum</span>
+          </div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;color:var(--green);font-weight:500;">Match play · Points awarded: 1 pt per match won · 1/2 pt each for tie</div>
+      </div>
+    </div>
+
+    <!-- Session 2 -->
+    <div style="border:1px solid var(--rule);border-left:3px solid var(--gold);margin-bottom:1px;">
+      <div style="background:var(--forest);color:var(--fairway);padding:0.6rem 1.2rem;display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;">Session 2 &mdash; Fourball</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;color:var(--gold-lt)">Fri Jul 10 · Smith "Signature" · 8:40 AM</span>
+      </div>
+      <div style="background:var(--parchment);padding:1rem 1.2rem;">
+        <div style="font-size:0.85rem;color:var(--muted);margin-bottom:0.7rem;font-style:italic;">Same fourball format. Captains may shuffle pairings between morning and afternoon sessions.</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;color:var(--green);font-weight:500;">Match play · Points awarded: 1 pt per match won · 1/2 pt each for tie</div>
+      </div>
+    </div>
+
+    <!-- Session 3 -->
+    <div style="border:1px solid var(--rule);border-left:3px solid var(--gold);margin-bottom:1px;">
+      <div style="background:var(--forest);color:var(--fairway);padding:0.6rem 1.2rem;display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;">Session 3 &mdash; Singles</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;color:var(--gold-lt)">Fri Jul 10 · Smith "Tradition" · 2:24 PM</span>
+      </div>
+      <div style="background:var(--parchment);padding:1rem 1.2rem;">
+        <div style="font-size:0.85rem;color:var(--muted);margin-bottom:0.7rem;font-style:italic;">1 v 1 -- all 8 players paired individually across team lines. Pairings announced before the round.</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;color:var(--green);font-weight:500;">Match play · Points awarded: 1 pt per match won · 1/2 pt each for tie</div>
+      </div>
+    </div>
+
+    <!-- Session 4 -->
+    <div style="border:1px solid var(--rule);border-left:3px solid var(--gold);margin-bottom:1.8rem;">
+      <div style="background:var(--forest);color:var(--fairway);padding:0.6rem 1.2rem;display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;">Session 4 &mdash; TBD</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;color:var(--gold-lt)">Sat Jul 11 · Fazio "Premier" · 10:00 AM</span>
+      </div>
+      <div style="background:var(--parchment);padding:1rem 1.2rem;">
+        <div style="font-size:0.85rem;color:var(--muted);margin-bottom:0.7rem;font-style:italic;">Relax and enjoy one last round at Treetops. Play whatever format the group feels like—skins, scramble, wolf, or just stroke play. No team points or tournament scoring.</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;color:var(--gold);font-weight:500;">Friendly round · No points awarded</div>
+      </div>
+    </div>
+
+    <!-- Scoring summary -->
+    <p class="eyebrow" style="margin-bottom:0.9rem">Scoring &amp; Payout</p>
+    <div class="format-grid" style="margin-bottom:1.5rem;">
+      <div class="format-cell">
+        <div class="format-label">Points Available</div>
+        <div class="format-val">8</div>
+        <div class="format-sub">8 total match points available</div>
+      </div>
+      <div class="format-cell">
+        <div class="format-label">CTP Front/Back</div>
+        <div class="format-val">$5 Each Round</div>
+        <div class="format-sub">Front 9 &amp; Back 9 every round</div>
+      </div>
+      <div class="format-cell">
+        <div class="format-label">Each Match</div>
+        <div class="format-val">$15</div>
+        <div class="format-sub">Paid to the winner of every match</div>
+      </div>
+      <div class="format-cell">
+        <div class="format-label">Winning Team</div>
+        <div class="format-val">$25 a Man</div>
+        <div class="format-sub">Paid to each player on the winning team</div>
+      </div>
+    </div>
+
+    <p class="eyebrow" style="margin-bottom:0.8rem">Course Handicaps</p>
+
+    <div style="overflow-x:auto;margin-bottom:1.8rem;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+        <thead>
+          <tr>
+            <th style="background:var(--forest);color:var(--fairway);font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 1rem;text-align:left;font-weight:500;border-right:1px solid rgba(255,255,255,0.1);">Player</th>
+            <th style="background:var(--forest);color:var(--fairway);font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 0.8rem;text-align:center;font-weight:500;border-right:1px solid rgba(255,255,255,0.1);">Jones<br><span style="color:var(--gold-lt);font-size:0.58rem;letter-spacing:0.08em">Masterpiece</span></th>
+            <th style="background:var(--forest);color:var(--fairway);font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 0.8rem;text-align:center;font-weight:500;border-right:1px solid rgba(255,255,255,0.1);">Smith<br><span style="color:var(--gold-lt);font-size:0.58rem;letter-spacing:0.08em">Signature</span></th>
+            <th style="background:var(--forest);color:var(--fairway);font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 0.8rem;text-align:center;font-weight:500;border-right:1px solid rgba(255,255,255,0.1);">Smith<br><span style="color:var(--gold-lt);font-size:0.58rem;letter-spacing:0.08em">Tradition</span></th>
+            <th style="background:var(--forest);color:var(--fairway);font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 0.8rem;text-align:center;font-weight:500;">Fazio<br><span style="color:var(--gold-lt);font-size:0.58rem;letter-spacing:0.08em">Premier</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Team Collin -->
+          <tr>
+            <td colspan="5" style="background:rgba(46,74,34,0.15);padding:0.3rem 1rem;font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--green-mid);font-weight:500;border-bottom:1px solid var(--rule);">Team Collin</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:0.6rem 1rem;font-weight:600;color:var(--forest);background:var(--parchment);">Collin O'Riordon</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;color:var(--ink);background:var(--parchment);">5</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;color:var(--ink);background:var(--parchment);">4</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;color:var(--ink);background:var(--parchment);">1</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;color:var(--ink);background:var(--parchment);">2</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:0.6rem 1rem;font-weight:600;color:var(--forest);">Kyle Dockery</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">13</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">12</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">7</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">10</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:0.6rem 1rem;font-weight:600;color:var(--forest);background:var(--parchment);">Jake Muellerschoen</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">12</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">11</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">7</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">9</td>
+          </tr>
+          <tr style="border-bottom:2px solid var(--gold);">
+            <td style="padding:0.6rem 1rem;font-weight:600;color:var(--forest);">Ryan Cook</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">20</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">19</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">13</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">16</td>
+          </tr>
+          <!-- Team Scott -->
+          <tr>
+            <td colspan="5" style="background:rgba(46,74,34,0.15);padding:0.3rem 1rem;font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--green-mid);font-weight:500;border-bottom:1px solid var(--rule);">Team Scott</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:0.6rem 1rem;font-weight:600;color:var(--forest);background:var(--parchment);">Scott Kosakowski</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">9</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">9</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">5</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">6</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:0.6rem 1rem;font-weight:600;color:var(--forest);">Andrew Yokum</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">15</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">14</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">9</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">12</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:0.6rem 1rem;font-weight:600;color:var(--forest);background:var(--parchment);">Dudley Singer</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">22</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">21</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">15</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;background:var(--parchment);">18</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:0.6rem 1rem;font-weight:600;color:var(--forest);">Enrico Morelli</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">24</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">23</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">17</td>
+            <td style="padding:0.6rem 0.8rem;text-align:center;font-family:'DM Mono',monospace;">20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="eyebrow" style="margin-bottom:0.8rem">Rules &amp; Notes</p>
+    <ul class="rules-list">
+      <li>
+        <span class="rule-marker">--</span>
+        <span>Fourball (best ball): every player plays their own ball -- the lowest net score among the two partners counts as the team score for that hole.</span>
+      </li>
+      <li>
+        <span class="rule-marker">--</span>
+        <span>Singles: standard match play, one-on-one, full course. Pairings announced Saturday morning.</span>
+      </li>
+      <li>
+        <span class="rule-marker">--</span>
+        <span>Handicaps applied per USGA match play guidelines. Stroke index from each course's official card.</span>
+      </li>
+      <li>
+        <span class="rule-marker">--</span>
+        <span>Conceded putts (gimmes) are at the opponent's discretion. Pick it up = it's good. No taking it back.</span>
+      </li>
+      <li>
+        <span class="rule-marker">--</span>
+        <span>No out of bounds: everything will be played as a red lateral hazard.</span>
+      </li>
+      <li>
+        <span class="rule-marker">--</span>
+        <span>In the event of a tie in total points, captains will decide on a tiebreaker.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- PACKING LIST -->
+  <section id="packing">
+    <div class="section-header">
+      <h2 class="section-title">Packing List</h2>
+    </div>
+
+    <div class="pack-columns">
+      <div>
+        <div class="pack-group-title">On the Course</div>
+        <ul class="pack-list">
+          <li><div class="pack-check"></div> Golf clubs &amp; bag</li>
+          <li><div class="pack-check"></div> Golf shoes (soft spikes)</li>
+          <li><div class="pack-check"></div> Golf glove(s)</li>
+          <li><div class="pack-check"></div> Golf shirts (collared)</li>
+          <li><div class="pack-check"></div> Golf pants / shorts</li>
+          <li><div class="pack-check"></div> Hat / visor</li>
+          <li><div class="pack-check"></div> Rain gear</li>
+          <li><div class="pack-check"></div> Sunscreen</li>
+          <li><div class="pack-check"></div> Sunglasses</li>
+          <li><div class="pack-check"></div> 2+ sleeves of balls</li>
+          <li><div class="pack-check"></div> Tees, divot tool, markers</li>
+          <li><div class="pack-check"></div> Rangefinder / GPS watch</li>
+          <li><div class="pack-check"></div> Towel</li>
+        </ul>
+
+        <div class="pack-group-title">Gear</div>
+        <ul class="pack-list">
+          <li><div class="pack-check"></div> Luggage / bag tags</li>
+          <li><div class="pack-check"></div> Portable phone charger</li>
+          <li><div class="pack-check"></div> Headphones</li>
+          <li><div class="pack-check"></div> Cash for bets &amp; tips</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="pack-group-title">Off the Course</div>
+        <ul class="pack-list">
+          <li><div class="pack-check"></div> Casual shirts</li>
+          <li><div class="pack-check"></div> Pants / shorts</li>
+          <li><div class="pack-check"></div> Dinner attire</li>
+          <li><div class="pack-check"></div> Comfortable shoes</li>
+          <li><div class="pack-check"></div> Swimwear</li>
+          <li><div class="pack-check"></div> Toiletries / shaving kit</li>
+          <li><div class="pack-check"></div> Medications</li>
+          <li><div class="pack-check"></div> Ibuprofen / Advil</li>
+        </ul>
+
+        <div class="pack-group-title">Don't Forget</div>
+        <ul class="pack-list">
+          <li><div class="pack-check"></div> ID / credit card</li>
+          <li><div class="pack-check"></div> Trip confirmation info</li>
+          <li><div class="pack-check"></div> Emergency contacts</li>
+          <li><div class="pack-check"></div> Good attitude </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <p>Treetops Resort <span>·</span> Gaylord, MI <span>·</span> July 9-12, 2026 <span>·</span> Good luck, gentlemen.</p>
+</footer>
+
+<script>
+  // Checkbox toggle for packing list
+  document.querySelectorAll('.pack-check').forEach(box => {
+    box.addEventListener('click', () => {
+      box.classList.toggle('checked');
+      const li = box.closest('li');
+      if (box.classList.contains('checked')) {
+        box.style.background = '#2e4a22';
+        box.style.borderColor = '#2e4a22';
+        li.style.opacity = '0.45';
+        li.style.textDecoration = 'line-through';
+      } else {
+        box.style.background = '';
+        box.style.borderColor = '';
+        li.style.opacity = '';
+        li.style.textDecoration = '';
+      }
+    });
+  });
+</script>
+</body>
+</html>
